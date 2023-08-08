@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "3db9de96-c0ea-494a-ac18-daf84eca1dda",
+		"name": "Moly.hu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12635856"
+	},
+	"item": [
+		{
+			"name": "Könyvkereső",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/books.json?q=vándorünnep&key={{personalKey}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"books.json"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "vándorünnep"
+						},
+						{
+							"key": "key",
+							"value": "{{personalKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ISBN-kereső",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/book_by_isbn.json?q=963825419X&key={{personalKey}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"book_by_isbn.json"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "963825419X"
+						},
+						{
+							"key": "key",
+							"value": "{{personalKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Könyvadatok",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/book/{{bookId}}.json?key={{personalKey}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"book",
+						"{{bookId}}.json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{personalKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Szerzőadatok",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/author/{{authorId}}.json?key={{personalKey}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"author",
+						"{{authorId}}.json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{personalKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kiadások",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/book_editions/{{bookId}}.json?key={{personalKey}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"book_editions",
+						"{{bookId}}.json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{personalKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Értékelések",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/book_reviews/{{bookId}}.json?key={{personalKey}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"book_reviews",
+						"{{bookId}}.json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{personalKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Idézetek",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/book_citations/{{bookId}}.json?key={{personalKey}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"book_citations",
+						"{{bookId}}.json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{personalKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://moly.hu/api",
+			"type": "string"
+		},
+		{
+			"key": "personalKey",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "bookId",
+			"value": "15331"
+		},
+		{
+			"key": "authorId",
+			"value": "407"
+		}
+	]
+}
